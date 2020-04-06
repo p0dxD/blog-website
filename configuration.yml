@@ -6,6 +6,7 @@ projects:
         stages:
             build:
                 tool: node
+                framework: nuxt
                 version: latest
             upload:
                 tool: docker
