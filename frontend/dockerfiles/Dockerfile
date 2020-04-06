@@ -7,6 +7,7 @@ WORKDIR /usr/src/nuxt-app
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
 
+RUN ls -la /usr/src/nuxt-app/
 # expose 5000 on container
 EXPOSE 8082
 
