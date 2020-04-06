@@ -7,7 +7,6 @@ WORKDIR /usr/src/nuxt-app
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
 
-RUN npm install nuxt
 # expose 5000 on container
 EXPOSE 8082
 
