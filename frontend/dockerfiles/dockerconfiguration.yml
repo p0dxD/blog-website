@@ -11,4 +11,7 @@ docker:
         arguments:
             config_options: '-itd'
             ports:
-                - 8082:8082
+                - 8083:8083
+            environment:
+                PUBLIC_KEY_SECRET: '$PUBLIC_KEY_SECRET'
+                PRIVATE_KEY_SECRET: '$PRIVATE_KEY_SECRET'
