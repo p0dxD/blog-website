@@ -6,12 +6,12 @@ COPY . /usr/src/nuxt-app/
 
 RUN ls -la /usr/src/nuxt-app/
 # expose 5000 on container
-EXPOSE 8083
+EXPOSE 81
 
 # set app serving to permissive / assigned
 ENV NUXT_HOST=0.0.0.0
 # set app port
-ENV NUXT_PORT=8083
+ENV NUXT_PORT=81
 
 # start the app
 CMD  echo $PUBLIC_KEY_SECRET | base64 -d > /usr/src/nuxt-app/public.pem \
