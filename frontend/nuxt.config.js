@@ -52,19 +52,27 @@ export default {
     [
       'nuxt-i18n',
       {
-        locales: ['en', 'es'],
-        defaultLocale: 'en',
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              greeting: 'Hello world!'
-            },
-            es: {
-              greeting: '¡Hola mundo!'
-            }
+        useCookie: false,
+        alwaysRedirect: true,
+        locales: [
+          {
+            code: 'en',
+            iso: 'en-US',
+            name: 'English',
+            file: 'en/index.js'
+          },
+          {
+            code: 'es',
+            iso: 'es-ES',
+            name: 'Español',
+            file: 'es/index.js'
           }
-        }
+        ],
+        lazy: true,
+        seo: false,
+        langDir: '/locales/',
+        defaultLocale: 'en',
+        parsePages: false
       }
     ]
   
