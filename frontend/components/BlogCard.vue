@@ -14,7 +14,11 @@
         <v-card-text>{{blog.description}}</v-card-text>
         <v-card-text>{{blog.date}}</v-card-text>
         <v-card-actions>
-          <v-btn text color="deep-purple accent-4">Read</v-btn>
+          <v-btn text color="deep-purple accent-4">
+            <nuxt-link
+              :to="localePath({ name: 'blogs-slug', params: { slug: blog.name, blog: blog }})"
+            >{{$t('read')}}</nuxt-link>
+          </v-btn>
           <v-btn text color="deep-purple accent-4">Bookmark</v-btn>
           <v-spacer></v-spacer>
           <v-btn icon>
