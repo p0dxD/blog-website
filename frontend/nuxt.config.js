@@ -1,16 +1,22 @@
 import colors from 'vuetify/es5/util/colors'
 import path from 'path'
 import fs from 'fs'
-import FMMode from 'frontmatter-markdown-loader/mode'
-
+import Mode from 'frontmatter-markdown-loader/mode'
+import MarkdownIt from 'markdown-it'
+import mip from 'markdown-it-prism'
+const md = new MarkdownIt({
+  html: true,
+  typographer: true
+})
+md.use(mip)
 export default {
   mode: 'universal',
-  server: {
-    https: {
-      key: fs.readFileSync(path.resolve(__dirname, 'private.pem')),
-      cert: fs.readFileSync(path.resolve(__dirname, 'public.pem'))
-    }
-  },
+  // server: {
+  //   https: {
+  //     key: fs.readFileSync(path.resolve(__dirname, 'private.pem')),
+  //     cert: fs.readFileSync(path.resolve(__dirname, 'public.pem'))
+  //   }
+  // },
   /*
   ** Headers of the page
   */
@@ -107,19 +113,20 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-      config.module.rules.push(
-        {
-          test: /\.md$/,
-          loader: 'frontmatter-markdown-loader',
-          include: path.resolve(__dirname, 'blogs'),
-          options: {
-            mode: [FMMode.VUE_COMPONENT],
-            vue: {
-              root: 'markdown-body'
-            }
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        include: path.resolve(__dirname, 'blogs'),
+        options: {
+          mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.VUE_COMPONENT],
+          vue: {
+            root: "dynamicMarkdown"
+          },
+          markdown(body) {
+            return md.render(body)
           }
         }
-      )
+      })
     }
   }
 }

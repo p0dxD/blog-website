@@ -1,4 +1,5 @@
 export default {
-    greeting: 'Hello Welcome!',
-    read: 'read'
+    greeting_text: 'Hello Welcome!',
+    read_text: 'read',
+    posts_text: 'Posts'
   }

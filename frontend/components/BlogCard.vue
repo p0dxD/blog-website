@@ -15,9 +15,9 @@
         <v-card-text>{{blog.date}}</v-card-text>
         <v-card-actions>
           <v-btn text color="deep-purple accent-4">
-            <nuxt-link
-              :to="localePath({ name: 'blogs-slug', params: { slug: blog.name, blog: blog }})"
-            >{{$t('read')}}</nuxt-link>
+            <nuxt-link id="read-btn"
+              :to="localePath({ name: 'blogs-slug', params: { slug: blog.name }})"
+            >{{$t('read_text')}}</nuxt-link>
           </v-btn>
           <v-btn text color="deep-purple accent-4">Bookmark</v-btn>
           <v-spacer></v-spacer>
@@ -42,3 +42,22 @@ export default {
   }
 };
 </script>
+
+<style >
+#read-btn:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#read-btn:visited {
+  text-decoration: none;
+}
+
+#read-btn:hover {
+  text-decoration: none;
+}
+
+#read-btn:active {
+  text-decoration: none;
+}
+</style>
