@@ -3,7 +3,7 @@
     <v-container>
       <v-row  justify="center">
         <div v-for="blog in blogs" :key="blog.name" :blog="blog">
-          <v-col cols="16">
+          <v-col cols="12">
             <Card :blog="blog" />
           </v-col>
         </div>

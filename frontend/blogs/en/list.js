@@ -1,4 +1,6 @@
 export default [
-    'testing',
-    'testing_two'
+    'jenkins_pipeline',
+    'testing_two',
+    'testing_three',
+    'testing_four'
   ]

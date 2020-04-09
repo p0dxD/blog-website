@@ -9,9 +9,6 @@
 
 <script>
 import BlogCard from "~/components/BlogCard";
-var MarkdownIt = require("markdown-it"),
-  md = new MarkdownIt();
-var result = md.render("# markdown-it rulezz!");
 
 import blogsEn from "~/blogs/en/list.js";
 import blogsEs from "~/blogs/es/list.js";
