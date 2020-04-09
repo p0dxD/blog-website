@@ -3,6 +3,11 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-switch v-model="$vuetify.theme.dark" hide-details inset label="Theme Dark"></v-switch>
+      <v-divider
+        class="mx-4"
+        vertical
+      ></v-divider>
       <nuxt-link v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
 
       <nuxt-link v-if="$i18n.locale !== 'es'" :to="switchLocalePath('es')">Español</nuxt-link>
