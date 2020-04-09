@@ -46,7 +46,7 @@ export default {
 <style >
 #read-btn:link {
   text-decoration: none;
-  color: inherit;
+  color: #6200ea;
 }
 
 #read-btn:visited {

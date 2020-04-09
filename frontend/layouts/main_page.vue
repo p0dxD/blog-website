@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-toolbar-title v-text="title" />
+      <a id="title" href="https://joserod.space"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
       <v-switch v-model="$vuetify.theme.dark" hide-details inset label="Theme Dark"></v-switch>
       <v-divider
@@ -34,3 +34,22 @@ export default {
   }
 };
 </script>
+
+<style >
+#title:link {
+  text-decoration: none;
+  color: #6200ea;
+}
+
+#titlen:visited {
+  text-decoration: none;
+}
+
+#title:hover {
+  text-decoration: none;
+}
+
+#title:active {
+  text-decoration: none;
+}
+</style>
