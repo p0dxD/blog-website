@@ -1,5 +1,5 @@
 <template>
-  <v-card width="500" class="mx-auto">
+  <v-card width="350" class="mx-auto">
     <v-list-item>
       <v-list-item-avatar color="grey"></v-list-item-avatar>
       <v-list-item-content>
