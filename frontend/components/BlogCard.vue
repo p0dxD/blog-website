@@ -1,13 +1,12 @@
 <template>
   <v-app id="inspire">
     <v-container>
-      <v-row  justify="center">
         <div v-for="blog in blogs" :key="blog.name" :blog="blog">
-          <v-col cols="12">
+            <v-row  justify="center">
             <Card :blog="blog" />
-          </v-col>
+          </v-row>
+          <div id="spacer"></div>
         </div>
-      </v-row>
     </v-container>
   </v-app>
 </template>
@@ -49,4 +48,9 @@ export default {
   text-decoration: none;
   color: #6200ea;
 }
+#spacer {
+  height: 30px;
+  width: 100%;
+}
+
 </style>

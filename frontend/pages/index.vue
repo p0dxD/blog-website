@@ -22,7 +22,6 @@ export default {
       const contentMd = await import(
         `~/blogs/${app.i18n.locale}/blog/${blogName}.md`
       );
-      console.log("Attributes" + JSON.stringify(contentMd.attributes));
       return contentMd.attributes;
     }
     return Promise.all(blogs.map(blog => importAttributes(blog))).then(res => {

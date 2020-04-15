@@ -36,7 +36,7 @@ export default {
 
 <style >
 #title {
-  color: #6200ea;
+  color: #7f858a;
 }
 
 #title:link {
