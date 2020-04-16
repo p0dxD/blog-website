@@ -1,6 +1,5 @@
 export default [
-    'jenkins_pipeline',
-    'testing_two',
-    'testing_three',
-    'testing_four'
+    // 'jenkins_pipeline',
+    // 'setup_jenkins',
+    'basic_docker',
   ]

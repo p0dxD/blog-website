@@ -26,6 +26,6 @@ export default {
       staticRenderFuncs: `[${contentMd.vue.staticRenderFns}]`
     };
   },
-  components: { DynamicMarkdown }
+  components: { DynamicMarkdown },
 };
 </script>

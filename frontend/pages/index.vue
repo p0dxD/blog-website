@@ -15,6 +15,9 @@ import blogsEs from "~/blogs/es/list.js";
 
 export default {
   layout: "main_page",
+    transition: {
+    name: 'slide-fade'
+  },
   components: { BlogCard },
   async asyncData({ app }) {
     const blogs = app.i18n.locale === "en" ? blogsEn : blogsEs;
