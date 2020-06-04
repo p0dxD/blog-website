@@ -1,6 +1,6 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
+    <v-flex xs12 sm12 md6>
       <h1>{{ $t('posts_text') }}</h1>
       <BlogCard :blogs="blogs" />
     </v-flex>

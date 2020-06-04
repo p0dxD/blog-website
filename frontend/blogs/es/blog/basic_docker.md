@@ -78,17 +78,8 @@ If there's any questions you can reach out to me or post them in the comments be
 <a name="references"></a>
 
 ### References
-- <a>https://www.docker.com/resources/what-container</a>
-- <a>https://docs.oracle.com/javase/tutorial/getStarted/cupojava/win32.html</a>
-- <a>https://stackify.com/docker-image-vs-container-everything-you-need-to-know/</a>
-
-- <a>https://cloud.google.com/containers </a>
-
-- <a>https://docs.docker.com/develop/develop-images/baseimages/</a>
-<style> 
-.testing {
-  width: 100%;
-  height: 100px;
-  background: red;
-}
-</style>
+- [docker](https://www.docker.com/resources/what-container)
+- [oracle win32](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/win32.html)
+- [stackify docker](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/)
+- [google containers](https://cloud.google.com/containers)
+- [docker base image](https://docs.docker.com/develop/develop-images/baseimages/)
