@@ -1,25 +1,28 @@
 <template>
-  <v-card  max-width="80%" min-width="80%" class="mx-auto">
-    <v-list-item>
-      <v-list-item-avatar color="grey"></v-list-item-avatar>
-      <v-list-item-content>
-        <v-list-item-title class="headline"><h3>{{blog.title}}</h3></v-list-item-title>
-        <v-list-item-subtitle>by {{blog.author}}</v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
-    <v-card-text><p>{{blog.description}}</p></v-card-text>
-    <v-divider></v-divider>
-    <v-card-text>Created: {{blog.date}}</v-card-text>
-    <v-card-actions>
-      <v-btn text color="deep-purple accent-4">
-        <nuxt-link
-          id="read-btn"
-          :to="localePath({ name: 'blogs-slug', params: { slug: blog.name }})"
-        class="date">{{$t('read_text')}}</nuxt-link>
-      </v-btn>
-      <v-spacer></v-spacer>
-    </v-card-actions>
-  </v-card>
+  <v-layout>
+    <v-row>
+      <v-flex class="text-center">
+        <v-col cols="12" md="12" xs="12">
+          <v-card class="d-flex align-content-start flex-wrap mx-auto">
+            <v-card-text>
+                              <v-btn
+                  outlined
+                  class="align-content-center text--primary"
+                >              <nuxt-link
+                id="read-btn"
+                :to="localePath({ name: 'blogs-slug', params: { slug: blog.name }})"
+              >{{blog.title}}</nuxt-link></v-btn>
+              <p>About article:</p>
+              <div class="text--primary">{{blog.description}}</div>
+              <br />
+              <p>Last updated: {{blog.date}}</p>
+              <p>Date created: {{blog.date}}</p>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-flex>
+    </v-row>
+  </v-layout>
 </template>
 
 <script>
@@ -33,15 +36,45 @@ export default {
 </script>
 
 <style scoped>
-h3 { color: inherit; font-family: 'Lato', sans-serif; font-weight: 300; }
+.md-card.md-with-hover {
+  height: 98%;
+  right: -3px;
+}
+#container-project {
+  position: relative;
+}
 
 
-p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+.titles {
+  color: #7c795d;
+  font-family: "Trocchi", serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+  padding: 25px;
+}
+.subtitles {
+  color: #7c795d;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 32px;
+}
 
+.md-card .md-subhead {
+  padding-bottom: 15px;
+}
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
-a:hover { color: #ffffff }
-
-
-.date { background: #cad2d8; color: #ffffff; display: inline-block; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: bold; line-height: 12px; letter-spacing: 1px; margin: 0 0 30px; padding: 10px 15px 8px; text-transform: uppercase; }
+#read-btn {
+  color: black !important;
+}
 </style>

@@ -1,14 +1,14 @@
 <template>
-  <v-app id="inspire">
-    <v-container>
+  <v-layout>
+    <v-row>
         <div v-for="blog in blogs" :key="blog.name" :blog="blog">
             <v-row  justify="center">
             <Card :blog="blog" />
           </v-row>
           <div id="spacer"></div>
         </div>
-    </v-container>
-  </v-app>
+    </v-row>
+  </v-layout>
 </template>
 
 <script>

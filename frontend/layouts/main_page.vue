@@ -5,11 +5,11 @@
         <v-toolbar-title v-text="title" />
       </a>
       <v-spacer />
-      <v-switch v-model="$vuetify.theme.dark" hide-details inset label="Theme Dark"></v-switch>
+      <v-switch v-model="$vuetify.theme.dark" hide-details inset></v-switch>
       <v-divider class="mx-4" vertical></v-divider>
-      <nuxt-link v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
+      <nuxt-link v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">En</nuxt-link>
 
-      <nuxt-link v-if="$i18n.locale !== 'es'" :to="switchLocalePath('es')">Español</nuxt-link>
+      <nuxt-link v-if="$i18n.locale !== 'es'" :to="switchLocalePath('es')">Es</nuxt-link>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -28,34 +28,39 @@ export default {
     return {
       fixed: false,
       clipped: false,
-      title: "Jose Rodriguez"
+      title: "JR"
     };
   }
 };
 </script>
 
 <style >
-#title {
-  color: #7f858a;
+a {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+a:hover {
+  color: #333;
+}
+#title,a.nuxt-link-active {
+  color: #333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  font-weight: 600;
 }
 
-#title:link {
-  text-decoration: none;
-  color: #6200ea;
-}
-
-#titlen:visited {
-  text-decoration: none;
-  color: #6200ea;
-}
-
-#title:hover {
-  text-decoration: none;
-  color: blue;
-}
-
-#title:active {
-  text-decoration: none;
-  color: #6200ea;
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+    background-color: white;
 }
 </style>
