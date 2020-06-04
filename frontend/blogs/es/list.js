@@ -1,3 +1,3 @@
 export default [
-  'jenkins_pipeline',
+  'basic_docker',
   ]

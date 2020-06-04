@@ -25,29 +25,7 @@ export default {
 </script>
 
 <style >
-#read-btn {
-  color: #6200ea;
-}
 
-#read-btn:link {
-  text-decoration: none;
-  color: #6200ea;
-}
-
-#read-btn:visited {
-  text-decoration: none;
-  color: #6200ea;
-}
-
-#read-btn:hover {
-  text-decoration: none;
-  color: blue;
-}
-
-#read-btn:active {
-  text-decoration: none;
-  color: #6200ea;
-}
 #spacer {
   height: 30px;
   width: 100%;

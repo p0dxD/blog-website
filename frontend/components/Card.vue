@@ -15,7 +15,7 @@
               <p>About article:</p>
               <div class="text--primary">{{blog.description}}</div>
               <br />
-              <p>Last updated: {{blog.date}}</p>
+              <p>Last updated: {{blog.updated}}</p>
               <p>Date created: {{blog.date}}</p>
             </v-card-text>
           </v-card>
@@ -74,7 +74,7 @@ export default {
   transform: translateY(-50%);
 }
 
-#read-btn {
-  color: black !important;
+a#read-btn {
+    color: inherit;
 }
 </style>
